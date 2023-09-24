@@ -1,19 +1,18 @@
-
---***** Veritaban? Olu?turma *****--
+--***** Veritabanı Oluşturma *****--
 
 create database Sinif_101
 
--- Bu komut ile "Sinif_101" ad?nda bir veritaban? olu?turuluyor --
+-- Bu komut ile "Sinif_101" adında bir veritabanı oluşturuluyor --
 --*******************************--
 
---***** "Sinif_101" Veritaban?n? Kullanma *****--
+--***** "Sinif_101" Veritabanını Kullanma *****--
 
 use Sinif_101
 
--- Bu komut ile "Sinif_101" veritaban? kullan?lmaya ba?lan?yor --
+-- Bu komut ile "Sinif_101" veritabanı kullanılmaya başlanıyor --
 --*******************************--
 
---***** Tablo Olu?turma *****--
+--***** Tablo Oluşturma *****--
 
 create table Ogrenciler
 (
@@ -25,10 +24,10 @@ create table Ogrenciler
     Not1 tinyint not null,
     Not2 tinyint,
 )
--- Bu komut ile "Ogrenciler" ad?nda bir tablo olu?turuluyor -- 
+-- Bu komut ile "Ogrenciler" adında bir tablo oluşturuluyor -- 
 --*******************************--
 
---***** Ba?ka Bir Veritaban? ve Tablo Olu?turma *****--
+--***** Başka Bir Veritabanı ve Tablo Oluşturma *****--
 
 create database SStok
 go
@@ -49,22 +48,22 @@ create table Urunler
     Fiyat money not null,
     StokMiktari int not null
 )
--- Bu kod blo?u "SStok" ad?nda bir veritaban? olu?turup i�inde "Kategoriler" ve "Urunler" ad?nda iki tablo olu?turuyor --
+-- Bu kod bloğu "SStok" adında bir veritabanı oluşturup içinde "Kategoriler" ve "Urunler" adında iki tablo oluşturuyor --
 --*******************************--
 
 --***** Kolon Ekleme *****--
 
 Alter Table Ogrenciler add Ogretmen nvarchar(25)
 
--- Bu komut ile "Ogrenciler" tablosuna "Ogretmen" ad?nda bir kolon ekleniyor -- 
+-- Bu komut ile "Ogrenciler" tablosuna "Ogretmen" adında bir kolon ekleniyor -- 
 --*******************************--
 
 
---***** Kolon G�ncelleme *****--
+--***** Kolon Güncelleme *****--
 
 alter table Ogrenciler alter column Ogretmen money not null
 
--- Bu komut ile "Ogretmen" kolonunun veri tipi "money" olarak g�ncelleniyor -- 
+-- Bu komut ile "Ogretmen" kolonunun veri tipi "money" olarak güncelleniyor -- 
 --*******************************--
 
 
@@ -82,14 +81,14 @@ alter table Ogrenciler add  OgretmenID int not null
     Constraint FK_Ogrenci_Ogretmen
     references Ogretmenler(ID)
 
--- Bu komut ile "Ogrenciler" tablosuna "OgretmenID" ad?nda bir int kolon ekleniyor ve bu kolon "Ogretmenler" tablosundaki "ID" kolonuna referans veriyor --
+-- Bu komut ile "Ogrenciler" tablosuna "OgretmenID" adında bir int kolon ekleniyor ve bu kolon "Ogretmenler" tablosundaki "ID" kolonuna referans veriyor --
 --*******************************--
 
 --***** Veri Ekleme *****--
 
-insert into Ogretmenler (OgretmenAdi,OgretmenSoyad,Brans) values ('Leyla','Kabak�?','Bilgisayar')
+insert into Ogretmenler (OgretmenAdi,OgretmenSoyad,Brans) values ('Leyla','Kabakçı','Bilgisayar')
 
---Bu komut ile "Ogretmenler" tablosuna yeni bir �?retmen ekleniyor --
+--Bu komut ile "Ogretmenler" tablosuna yeni bir öğretmen ekleniyor --
 --*******************************--
 
 --***** Join ile Veri Getirme *****--
@@ -102,7 +101,5 @@ select
     Brans
 from Ogrenciler inner join Ogretmenler on Ogrenciler.OgretmenID=Ogretmenler.ID
 
--- Bu sorgu ile "Ogrenciler" ve "Ogretmenler" tablolar?n? birle?tirip belirtilen kolonlar? se�iyor --
+-- Bu sorgu ile "Ogrenciler" ve "Ogretmenler" tablolarını birleştirip belirtilen kolonları seçiyor --
 --*******************************--
-
-
