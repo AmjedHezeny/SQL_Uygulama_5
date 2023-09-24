@@ -1,1 +1,3 @@
-# SQL_Uygulama_5
+# SQL Veritabanı Temel Komutları ve Kullanımları 💼📊
+
+*
