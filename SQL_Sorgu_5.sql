@@ -3,7 +3,7 @@
 create database Sinif_101
 
 -- Bu komut ile "Sinif_101" adında bir veritabanı oluşturuluyor --
---*******************************--
+--*****************************--
 
 --***** "Sinif_101" Veritabanını Kullanma *****--
 
